@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/folder/Homepage"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editing product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="product.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="product.category" okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let category of categories" [value]="category">{{category.name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Price</ion-label>
+    <ion-input [(ngModel)]="product.price"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="editProduct()">
+      <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+      &nbsp;Edit
+    </ion-button>
+  </ion-item>
+</ion-content>

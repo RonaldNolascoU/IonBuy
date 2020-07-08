@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome back</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="login()">Sign In</ion-button>
+        <a [routerLink]="['/register']" routerLinkActive="router-link-active"  class="text-center small-text">No account? Register now</a>
+      </ion-col>
+    </ion-row>
+</ion-content>

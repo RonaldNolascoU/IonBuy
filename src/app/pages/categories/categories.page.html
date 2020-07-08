@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/folder/Homepage"></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      IonBuy
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+     {{category}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -25,7 +25,7 @@
           <ion-card-content>
             <ion-row>
               <ion-col>
-                <ion-label color="danger" [routerLink]="['/category/', p.category.id]">
+                <ion-label color="danger">
                   <b>{{ p.category.name }}</b>
                 </ion-label>
               </ion-col>

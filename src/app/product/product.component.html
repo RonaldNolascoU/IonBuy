@@ -1,0 +1,27 @@
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="productForm.name"></ion-input>
+    {{productForm.name}}
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-input [(ngModel)]="productForm.description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Category</ion-label>
+    <ion-input [(ngModel)]="productForm.category"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Image</ion-label>
+    <ion-input [(ngModel)]="productForm.image"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="createProduct()">
+      <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+      &nbsp;Create Record
+    </ion-button>
+  </ion-item>
